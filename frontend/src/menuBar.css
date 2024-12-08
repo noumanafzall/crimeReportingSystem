@@ -2,42 +2,43 @@
 .menu-container {
   position: fixed;
   top: 0;
-  left: -100%; /* Fully hide off-screen initially */
-  width: 20%; /* Occupies 20% of the screen width */
+  left: -100%; /* Initially hidden off-screen */
+  width: 20%; /* Menu width */
   height: 100vh; /* Full viewport height */
-  background-color: rgba(0, 0, 0, 0.9); /* Match container background */
-  color: #fff; /* Light text for contrast */
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
   display: flex;
-  flex-direction: column; /* Arrange items vertically */
-  justify-content: flex-start; /* Start from the top */
-  padding: 20px; /* Inner padding for menu items */
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6); /* Shadow on the right */
-  z-index: 1000; /* Stay above other elements */
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6);
+  z-index: 1000; /* Ensure menu is above most elements */
   transition: left 0.3s ease-in-out; /* Smooth slide effect */
 }
 
 /* When menu is open */
 .menu-container.menu-open {
-  left: 0; /* Slide into view */
+  left: 0; /* Slide menu into view */
 }
 
 /* Menu Items */
 .menu ul {
+  top: 20px;
   list-style: none; /* Remove default bullet points */
   padding: 0;
-  margin: 0;
+  margin: 100px 0;
 }
 
 .menu li {
   margin-bottom: 20px; /* Space between menu items */
   padding: 10px 15px; /* Padding around each item */
-  border-radius: 8px; /* Rounded corners for menu items */
+  border-radius: 8px; /* Rounded corners */
   font-size: 1rem;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .menu li:hover {
-  background-color: #a00000; /* Highlight menu item on hover */
+  background-color: #a00000; /* Highlight on hover */
   transform: scale(1.05); /* Slight zoom effect */
 }
 
@@ -49,25 +50,41 @@
 }
 
 /* Toggle Button */
-.menu-toggle {
+.menu-toggle,
+.menu-close {
   position: fixed;
-  top: 0;
+  top: 20px; /* Keep button aligned with the top */
   left: 20px; /* Fixed position in top-left corner */
-  background-color: #c00000; /* Match the emergency button */
+  background-color: #c00000; /* Button background color */
   color: #fff;
   border: none;
-  border-radius: 50%; /* Circular button */
-  width: 60px;
-  height: 60px;
+  border-radius: 15%; /* Circular button */
+  width: 50px;
+  height: 50px;
   font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-  z-index: 1100; /* Ensure above the menu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  z-index: 1101; /* Above menu container */
   transition: background-color 0.3s, transform 0.2s;
 }
+
+/* Hide the toggle button when menu is open */
+.menu-container.menu-open .menu-toggle {
+  display: none;
+}
+
+/* Show the close button when menu is open */
+.menu-container .menu-close {
+  display: none;
+}
+
+.menu-container.menu-open .menu-close {
+  display: flex;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

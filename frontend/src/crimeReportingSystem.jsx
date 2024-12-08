@@ -84,6 +84,10 @@ function CrimeReportingSystem() {
         alert('Report submitted successfully');
     };
 
+    const sendEmergencyAlert = () => {
+        alert('Emergency Alert Sent! Please stay safe.'); 
+    };
+
     return (
         <div className="container">
             <h1 className='appTitle'>Crime Reporting System<br /><small>جرم کی رپورٹنگ کا نظام</small></h1>
@@ -181,6 +185,11 @@ function CrimeReportingSystem() {
 
                 <button type="submit">Submit Report / رپورٹ جمع کریں</button>
             </form>
+
+            <button className="emergency-button" onClick={sendEmergencyAlert}>
+                <i className="fas fa-phone-alt"></i>
+            </button>
+
         </div>
     );
 }
