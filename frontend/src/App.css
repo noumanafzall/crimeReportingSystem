@@ -1,0 +1,85 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #000000, #1A1A1A); /* Black gradient background */
+  color: white;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent scrolling when menu is open */
+}
+
+/* Content Container */
+.content-container {
+  flex-grow: 1; /* Take up remaining space beside the menu */
+  padding: 20px;
+  overflow-y: auto; /* Allow vertical scrolling for content */
+}
+
+/* App Logo */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header */
+.App-header {
+  background-color: rgba(40, 44, 52, 0.95); /* Slight transparency for depth */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f0f0f0; /* Light gray for readability */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow for pop-out effect */
+}
+
+/* Links */
+.App-link {
+  color: #a00000; /* Highlight links with red */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.App-link:hover {
+  color: #c00000; /* Darker red on hover */
+}
+
+/* Animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+    padding: 20px;
+  }
+
+  .App-logo {
+    height: 30vmin;
+  }
+
+  .content-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+}

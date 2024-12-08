@@ -1,0 +1,83 @@
+/* Menu Container */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Fully hide off-screen initially */
+  width: 20%; /* Occupies 20% of the screen width */
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(0, 0, 0, 0.9); /* Match container background */
+  color: #fff; /* Light text for contrast */
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: flex-start; /* Start from the top */
+  padding: 20px; /* Inner padding for menu items */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6); /* Shadow on the right */
+  z-index: 1000; /* Stay above other elements */
+  transition: left 0.3s ease-in-out; /* Smooth slide effect */
+}
+
+/* When menu is open */
+.menu-container.menu-open {
+  left: 0; /* Slide into view */
+}
+
+/* Menu Items */
+.menu ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 20px; /* Space between menu items */
+  padding: 10px 15px; /* Padding around each item */
+  border-radius: 8px; /* Rounded corners for menu items */
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.menu li:hover {
+  background-color: #a00000; /* Highlight menu item on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Menu Links */
+.menu li a {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+  display: block;
+}
+
+/* Toggle Button */
+.menu-toggle {
+  position: fixed;
+  top: 0;
+  left: 20px; /* Fixed position in top-left corner */
+  background-color: #c00000; /* Match the emergency button */
+  color: #fff;
+  border: none;
+  border-radius: 50%; /* Circular button */
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  z-index: 1100; /* Ensure above the menu */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-container {
+    width: 60%; /* Occupies 60% width on smaller screens */
+  }
+
+  .menu-toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

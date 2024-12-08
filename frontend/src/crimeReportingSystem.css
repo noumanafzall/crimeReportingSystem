@@ -1,0 +1,145 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #1A1A1A); /* Black gradient background */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styles */
+.container {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9); /* Slight transparency for depth */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Header Styles */
+.appTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+label {
+  font-size: 1rem;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+#name,
+textarea,input[type="file"] {
+  width: 96%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 2px solid #a00000;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+/* Inputs, Selects, and Textarea */
+
+select{
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 2px solid #a00000;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+/* Button */
+button {
+  background-color: #a00000;
+  color: #fff;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #c00000;
+  transform: scale(1.02);
+}
+
+/* Emergency Button */
+.emergency-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #c00000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.emergency-button:hover {
+  background-color: #e00000;
+  transform: scale(1.1);
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+  }
+
+  button,
+  input[type="text"],
+  select,
+  textarea {
+      font-size: 0.9rem;
+  }
+
+  .emergency-button {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+  }
+}

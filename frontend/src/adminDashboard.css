@@ -1,0 +1,111 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #000000, #1A1A1A); /* Black gradient background */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container Styles */
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Slight transparency for depth */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Header Styles */
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  table th,
+  table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #a00000;
+  }
+  
+  table th {
+    background-color: #a00000;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #333;
+  }
+  
+  table tr:nth-child(odd) {
+    background-color: #222;
+  }
+  
+  table tr:hover {
+    background-color: #444;
+  }
+  
+  /* Table Hover Effect */
+  table tr:hover {
+    background-color: #444;
+  }
+  
+  /* Emergency Button */
+  .emergency-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #c00000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .emergency-button:hover {
+    background-color: #e00000;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    table {
+      font-size: 0.9em;
+    }
+  
+    table th,
+    table td {
+      padding: 8px;
+    }
+  
+    .emergency-button {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+  }
+  

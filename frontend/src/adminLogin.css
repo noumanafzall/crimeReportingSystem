@@ -1,0 +1,109 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #1A1A1A); /* Black gradient background */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Container Styles */
+.login-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: rgba(30, 30, 30, 0.9); /* Adjusted for better contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 0, 0, 0.8); /* Enhanced glow effect */
+  text-align: center;
+  border: 3px solid rgba(255, 0, 0, 1); /* Solid red border for better visibility */
+}
+
+/* Header Styles */
+.login-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 2px solid #a00000;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  border-color: #ff3333;
+  box-shadow: 0 0 8px rgba(255, 50, 50, 0.8);
+}
+
+/* Placeholder Styling */
+input::placeholder {
+  color: #aaa;
+}
+
+/* Button */
+button {
+  background-color: #a00000;
+  color: #fff;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 20px auto 0; /* Center the button */
+  display: block; /* Ensure it's treated as a block element for centering */
+  width: 80%;
+}
+
+button:hover {
+  background-color: #c00000;
+  transform: scale(1.02);
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button,
+  input[type="text"],
+  input[type="password"] {
+    font-size: 0.9rem;
+  }
+}
